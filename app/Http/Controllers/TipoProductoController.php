@@ -29,6 +29,7 @@ class TipoProductoController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**

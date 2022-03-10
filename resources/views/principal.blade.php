@@ -4,11 +4,15 @@
 @extends('layouts.cuerpo')
 @section('content')
 <div class="row">
-    <li class="nav-item d-none d-lg-flex">
-        <a class="nav-link" href="{{ url('/regismes') }}">
-    <span class="btn btn-primary">+ Crear Mesa</span>
-        </a>
-    </li>
+   
+    @if( Auth::user()->isadmin ==1 )
+     <li class="nav-item d-none d-lg-flex">
+          <a class="nav-link" href="{{ url('/regismes') }}">
+             <span class="btn btn-primary">+ Crear Mesa</span>
+          </a>
+     </li>     
+    @endif
+    
     @foreach($mesa as $value)
     @if($value->ocupado==0)
     <div class="col-lg-2 col-3">
