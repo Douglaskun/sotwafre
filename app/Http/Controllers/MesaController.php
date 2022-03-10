@@ -47,28 +47,20 @@ class MesaController extends Controller
     public function store(Request $request)
     {
         //
-        $productos = [];
-        $count = count(array($request->get('mesas')));
         $mesa = new Mesa();
-        for($a =0 ; $a < $count ; $a++ ) {
-          foreach ($request->get('mesas') as $id => $value) {
-            $productos[] =  Mesa::find($NunMesa)
-                            ? $NunMesa
-                            : Mesa::create($request->get('mesas')[$a])->NunMesa; 
-                                  
-          }
+        $mesa1=DB::table('mesas')
+        ->select('mesas.NumMesa')
+        ->orderBy('NumMesa','desc')
+        ->first();
+      
+        foreach($mesa1 as $mesa2){
 
-        } 
-        $mesa = new Mesa();
-          $mesa->NunMesa=19;
-          $mesa->ocupado = 0;
-   //     $apoyo->productos()->sync($productos);
-       
-        
-      //  $mesa->NunMesa = 17;
-        
+          $mesaSgt=$mesa2;
+        }
+
+        $mesa->NumMesa= $mesaSgt+1;
+        $mesa->ocupado=0;
         $mesa->save();
-  
         return redirect('/home');
        //return "hola";
     }

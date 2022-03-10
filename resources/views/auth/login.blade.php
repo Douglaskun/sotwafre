@@ -81,7 +81,7 @@
                             <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('img/logo2.jpg');background-size: cover;"> 
                                    <!-- <span class="mask bg-gradient-primary opacity-6"></span> -->
                                     <h4 class="mt-5 text-white font-weight-bolder position-relative">"Disfruta de la mejor comida"</h4>
-                                <h2 class="text-white position-relative" ><font color="black" face="arial"> <b>Restaurante las Delicias de Ruby.</b> </font>  </h2>
+                                <h2 class="text-white position-relative" ><font color="orange" face="arial"> <b>Restaurante las Delicias de Ruby.</b> </font>  </h2>
                                 </div>
                             </div>
                         </div>
